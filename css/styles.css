@@ -61,7 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #f4f4f4;
 }
 
 *,
@@ -11409,12 +11409,11 @@ p.lead {
 
 section.resume-section {
   display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
+  margin: 20px;
+  border-radius: 20px;
+  /* align-items: center; */
+  background-color: #fff;
+  
 }
 section.resume-section .resume-section-content {
   width: 100%;
@@ -11432,4 +11431,14 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+/* Footer styles */
+footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
