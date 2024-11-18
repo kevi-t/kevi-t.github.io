@@ -7,7 +7,7 @@
     <meta name="author" content="Kevin Wepondi" />
     <title>Kevin Wepondi | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version) -->
+    <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
@@ -17,25 +17,59 @@
     <style>
         body {
             font-family: "Muli", sans-serif;
+            overflow-x: hidden;
         }
+
         #sideNav {
             width: 250px;
+            height: 100vh;
+            position: fixed;
+            background-color: #007bff;
+            color: white;
+            transition: all 0.3s;
         }
+
+        #sideNav .navbar-brand img {
+            max-width: 120px;
+        }
+
         .img-profile {
             max-width: 150px;
             height: auto;
         }
+
+        .navbar-nav .nav-item .nav-link {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #ffc107;
+        }
+
+        .resume-section {
+            margin-left: 260px;
+            padding: 2rem;
+            transition: margin-left 0.3s;
+        }
+
+        .resume-section h2 {
+            color: #007bff;
+        }
+
         .progress-bar {
             background-color: #007bff;
         }
-        .resume-section {
-            padding: 2rem 4rem;
-        }
+
         @media (max-width: 992px) {
             #sideNav {
                 width: 100%;
+                height: auto;
+                position: static;
             }
+
             .resume-section {
+                margin-left: 0;
                 padding: 1rem;
             }
         }
@@ -45,14 +79,15 @@
 <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand js-scroll-trigger d-flex align-items-center" href="#page-top">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile Picture" />
+            <span class="ms-2">Kevin Wepondi</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav flex-column">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
@@ -66,8 +101,11 @@
         <!-- About Section -->
         <section class="resume-section" id="about">
             <div class="resume-section-content text-center">
-                <h1 class="mb-0">Kevin <span class="text-primary">(W) Wepondi</span></h1>
-                <div class="subheading mb-5">SOFTWARE ENGINEER | Nairobi, Kenya<br>+254792526394 | kelvinwafula1999@gmail.com</div>
+                <h1 class="mb-0">Kevin <span class="text-primary">Wepondi</span></h1>
+                <div class="subheading mb-5">
+                    SOFTWARE ENGINEER | Nairobi, Kenya<br />
+                    +254792526394 | kelvinwafula1999@gmail.com
+                </div>
                 <p class="lead mb-5">
                     I am a software engineer specializing in Spring Boot, web development, and REST APIs. 
                     With strong communication and problem-solving skills, I focus on creating efficient and innovative software solutions.
@@ -87,7 +125,7 @@
                 <h3>Horti-Market</h3>
                 <p>A simple e-commerce website for fresh horticultural produce, connecting customers to farmers.</p>
                 <a href="https://github.com/kevi-t/Horti-Market" target="_blank">
-                    <img src="assets/img/homepage.jpg" alt="Horti Market" class="img-fluid" width="600">
+                    <img src="assets/img/homepage.jpg" alt="Horti Market" class="img-fluid" width="100%">
                 </a>
             </div>
         </section>
