@@ -11293,8 +11293,150 @@ body {
   padding-top: 3.375rem;
   color: #6c757d;
 }
+/* General padding and margins for larger screens */
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
+
+  #sideNav {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sidebar */
+  }
+
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+
+  #sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+}
+
+/* Ensure sidebar is initially hidden on mobile */
+@media (max-width: 991px) {
+  #sideNav {
+    transform: translateX(-100%); /* Hide off-screen */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #sideNav.show {
+    transform: translateX(0); /* Show sidebar when 'show' class is added */
+  }
+
+  body {
+    padding-left: 0; /* Adjust body padding on mobile */
+  }
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+}
 
 @media (min-width: 992px) {
+  section.resume-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive images in navbar */
+#sideNav .navbar-brand .img-profile {
+  width: 100%;
+  height: auto;
+  max-width: 10rem; /* Restrict the maximum size */
+}
+
+/* Ensure social icons scale properly on small screens */
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
+}
+
+/* Icon sizes for dev icons */
+.dev-icons {
+  font-size: 3rem;
+}
+
+section.resume-section {
+  display: flex;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+
+/* @media (min-width: 992px) {
   body {
     padding-top: 0;
     padding-left: 17rem;
@@ -11412,7 +11554,7 @@ section.resume-section {
   margin: 20px;
   border-radius: 20px;
   /* align-items: center; */
-  background-color: #fff;
+/*   background-color: #fff;
   
 }
 section.resume-section .resume-section-content {
@@ -11432,8 +11574,9 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+ */
 /* Footer styles */
-footer {
+/* footer {
   background-color: #0f0f0f;
   color: #fff;
   text-align: center;
@@ -11441,4 +11584,5 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
+} */
+ */
